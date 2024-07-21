@@ -1,0 +1,83 @@
+{
+  "builder_name": "parquet",
+  "citation": "@article{Jaume2019FUNSDAD,\n  title={FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents},\n  author={Guillaume Jaume and H. K. Ekenel and J. Thiran},\n  journal={2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)},\n  year={2019},\n  volume={2},\n  pages={1-6}\n}\n",
+  "config_name": "funsd",
+  "dataset_name": "funsd-layoutlmv3",
+  "dataset_size": 37240299,
+  "description": "https://guillaumejaume.github.io/FUNSD/\n",
+  "download_checksums": {
+    "hf://datasets/nielsr/funsd-layoutlmv3@28e01a98701f3d1bf899af5962a889d64214ec4e/funsd/train/0000.parquet": {
+      "num_bytes": 26301029,
+      "checksum": null
+    },
+    "hf://datasets/nielsr/funsd-layoutlmv3@28e01a98701f3d1bf899af5962a889d64214ec4e/funsd/test/0000.parquet": {
+      "num_bytes": 9537997,
+      "checksum": null
+    }
+  },
+  "download_size": 35839026,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tokens": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "bboxes": {
+      "feature": {
+        "feature": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "_type": "Sequence"
+    },
+    "ner_tags": {
+      "feature": {
+        "names": [
+          "O",
+          "B-HEADER",
+          "I-HEADER",
+          "B-QUESTION",
+          "I-QUESTION",
+          "B-ANSWER",
+          "I-ANSWER"
+        ],
+        "_type": "ClassLabel"
+      },
+      "_type": "Sequence"
+    },
+    "image": {
+      "_type": "Image"
+    }
+  },
+  "homepage": "https://guillaumejaume.github.io/FUNSD/",
+  "license": "",
+  "size_in_bytes": 73079325,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 27302929,
+      "num_examples": 149,
+      "dataset_name": "funsd-layoutlmv3"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 9937370,
+      "num_examples": 50,
+      "dataset_name": "funsd-layoutlmv3"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
